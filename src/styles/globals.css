@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import your custom CSS here */
+@import './custome-styles.css';
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
