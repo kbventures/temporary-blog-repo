@@ -8,6 +8,8 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    env:
+      TEST_URL: 'https://vercel.com/kbventures/temporary-blog-repo'
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
