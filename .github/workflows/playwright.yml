@@ -9,7 +9,7 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     env:
-      TEST_URL: 'https://vercel.com/kbventures/temporary-blog-repo'
+      TEST_URL: 'https://temporary-blog-repo.vercel.app/'
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -19,7 +19,7 @@ jobs:
         run: |
           npm ci
           npx playwright install-deps firefox chromium
-          npx playwright install # Additional command to ensure dependencies are up-to-date
+          npx playwright install 
       - name: Run Playwright tests
         run: npx playwright test
       - uses: actions/upload-artifact@v3
