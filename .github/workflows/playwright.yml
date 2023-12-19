@@ -23,12 +23,9 @@ jobs:
           npx playwright install-deps firefox chromium
           npx playwright install 
 
-      - name: Print TEST_URL
+      - name: Run Playwright tests with TEST_URL environment variable
         run: |
-          echo "TEST_URL=${TEST_URL}"
-
-      - name: Run Playwright tests
-        run: npx playwright test
+          npx playwright test --env TEST_URL="${TEST_URL}"
 
       - uses: actions/upload-artifact@v3
         if: always()
