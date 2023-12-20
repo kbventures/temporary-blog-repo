@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { ChangeEvent, useEffect, useState } from "react";
 import { useTranslation } from "next-i18next";
+import React from 'react';
 
 const LanguageSelector = () => {
   const { pathname, push, route, asPath, locale } = useRouter();

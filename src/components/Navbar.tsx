@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
-import LanguageSelector from "@/src/components/LanguageSelector";
+import LanguageSelector from "../components/LanguageSelector";
 import { useRouter } from "next/router";
-
+import React from 'react';
 const Navbar = () => {
   const { t: navbarT } = useTranslation("navigation/navbar");
   const { t: languageSelectorT } = useTranslation("navigation/language-selector");
